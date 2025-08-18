@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+header, main, footer {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+header h1 {
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+section {
+    margin-bottom: 24px;
+}
+h2 {
+    color: #1565c0;
+    margin-top: 0;
+}
+ul {
+    padding-left: 20px;
+}
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 20px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
