@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Tucunaré - Projeto Biologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Sea-themed background effects -->
+    <div class="sea-background">
+        <div class="wave"></div>
+        <div class="bubble bubble1"></div>
+        <div class="bubble bubble2"></div>
+        <div class="bubble bubble3"></div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#classificacao">Classificação</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+        </ul>
+    </nav>
     <header>
         <h1>Tucunaré</h1>
         <p><strong>Nome Popular:</strong> Tucunaré</p>
         <p><strong>Nome da Espécie:</strong> Cichla spp.</p>
         <p><strong>Gênero:</strong> Cichla</p>
         <p><strong>Família:</strong> Cichlidae</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Cichla_ocellaris.jpg" alt="Tucunaré" class="main-fish-img">
+        <a href="#curiosidades" class="button cta-button">Veja Curiosidades</a>
     </header>
     <main>
-        <section>
+        <!-- Sobre o Projeto -->
+        <section id="sobre" class="about-section">
+            <h2>Sobre o Projeto</h2>
+            <p>Este site foi criado para apresentar informações científicas, curiosidades e imagens sobre o Tucunaré, um dos peixes mais emblemáticos da fauna brasileira. O objetivo é promover o conhecimento e a valorização da biodiversidade aquática.</p>
+        </section>
+        <section id="caracteristicas">
             <h2>Características e Ecologia</h2>
             <p><strong>Habitat:</strong> O Tucunaré é um peixe de água doce encontrado principalmente em rios e lagos de água doce da região amazônica e outras bacias hidrográficas da América do Sul, como o Rio Tocantins, Rio Xingu, e até mesmo o Rio Paraná.</p>
             <p><strong>Origem:</strong> Sua origem é nos rios da América do Sul, com algumas espécies também encontradas na bacia do Rio Orinoco, na Venezuela e Colômbia. O Tucunaré é uma espécie nativa da região amazônica.</p>
@@ -22,7 +48,7 @@
             <p><strong>Reprodução:</strong> A reprodução ocorre em ambientes de águas calmas, geralmente durante a estação das chuvas, quando as águas se tornam mais turvas e os peixes buscam locais mais rasos para desovar. O Tucunaré tem cuidado parental, com os pais protegendo os filhotes após a eclosão dos ovos.</p>
             <p><strong>País/Região Onde É Encontrado:</strong> É encontrado principalmente no Brasil, mas também em países vizinhos da América do Sul como Venezuela, Colômbia, Peru, Bolívia e Guiana.</p>
         </section>
-        <section>
+        <section id="classificacao">
             <h2>Classificação Científica</h2>
             <ul>
                 <li><strong>Ordem:</strong> Perciformes</li>
@@ -31,10 +57,24 @@
                 <li><strong>Reino:</strong> Animalia</li>
             </ul>
         </section>
-        <section>
+        <section id="curiosidades">
             <h2>Conservação e Curiosidades</h2>
             <p><strong>Corre risco de ser extinto?</strong> Atualmente, o Tucunaré não é considerado uma espécie em risco de extinção, mas como muitas outras espécies de peixes amazônicos, ele pode ser afetado por atividades humanas, como desmatamento, poluição dos rios e o impacto da pesca indiscriminada. Algumas espécies de Tucunaré são monitoradas devido à perda de habitat e outras ameaças.</p>
             <p><strong>Curiosidade Legal:</strong> O Tucunaré é muito valorizado por pescadores esportivos devido à sua força e resistência quando fisgado, sendo considerado um dos melhores peixes de água doce para esse tipo de pesca. Além disso, o Tucunaré é conhecido por sua incrível habilidade de caçar em águas rápidas e turvas, utilizando sua visão e agilidade para surpreender suas presas.</p>
+            <div class="curiosities">
+                <div class="curiosity">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Cichla_monoculus.jpg" alt="Tucunaré monoculus">
+                    <p><strong>Coloração:</strong> O Tucunaré apresenta cores vibrantes, variando entre tons de amarelo, verde e azul, com manchas pretas características.</p>
+                </div>
+                <div class="curiosity">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Cichla_temensis.jpg" alt="Tucunaré temensis">
+                    <p><strong>Espécies:</strong> Existem várias espécies de Tucunaré, como o Tucunaré-Açu (Cichla temensis), Tucunaré-Paca (Cichla piquiti) e Tucunaré-Monoculus (Cichla monoculus).</p>
+                </div>
+                <div class="curiosity">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Cichla_piquiti.jpg" alt="Tucunaré piquiti">
+                    <p><strong>Introdução em outros ambientes:</strong> O Tucunaré foi introduzido em represas e lagos fora de sua área original, tornando-se uma espécie invasora em algumas regiões.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

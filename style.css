@@ -1,38 +1,263 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f6f6f6;
     margin: 0;
-    padding: 0;
-    color: #222;
+    font-family: 'Montserrat', 'Quicksand', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f6fd 0%, #b3e0ff 100%);
+    color: #1a3c4e;
+    font-size: 1.08rem;
 }
-header, main, footer {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+.sea-background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
 }
-header h1 {
-    color: #2e7d32;
-    margin-bottom: 8px;
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 120px;
+    background: url('https://svgshare.com/i/14Ff.svg') repeat-x;
+    background-size: contain;
+    opacity: 0.6;
+    animation: waveMove 10s linear infinite;
 }
-section {
-    margin-bottom: 24px;
+
+@keyframes waveMove {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 100vw; }
 }
-h2 {
-    color: #1565c0;
-    margin-top: 0;
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    opacity: 0.7;
+    animation: bubbleUp 12s infinite linear;
 }
-ul {
-    padding-left: 20px;
+
+.bubble1 { width: 40px; height: 40px; left: 10vw; bottom: 60px; animation-delay: 0s; }
+.bubble2 { width: 25px; height: 25px; left: 30vw; bottom: 30px; animation-delay: 3s; }
+.bubble3 { width: 60px; height: 60px; left: 70vw; bottom: 80px; animation-delay: 6s; }
+
+@keyframes bubbleUp {
+    0% { transform: translateY(0); opacity: 0.7; }
+    80% { opacity: 0.7; }
+    100% { transform: translateY(-600px); opacity: 0; }
 }
-footer {
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #0093c4 60%, #0077b6 100%);
+    box-shadow: 0 2px 12px rgba(0,150,200,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.7rem 0;
+}
+.navbar a {
+    color: #fff;
+    font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.navbar a:hover {
+    background: #00b4d8;
+    color: #fff;
+}
+
+/* Header and main fish image */
+header {
+    background: linear-gradient(135deg, #e0f7fa 80%, #b3e0ff 100%);
+    padding: 2.5rem 1rem 1.5rem 1rem;
+    border-radius: 0 0 30px 30px;
     text-align: center;
-    font-size: 0.9em;
-    color: #888;
-    margin-top: 20px;
-    background: none;
-    box-shadow: none;
-    padding: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    margin-bottom: 1.5rem;
+}
+
+.main-fish-img {
+    width: 240px;
+    border-radius: 18px;
+    margin: 1rem auto;
+    box-shadow: 0 4px 16px rgba(0,150,200,0.18);
+    display: block;
+    border: 4px solid #0093c4;
+    transition: transform 0.2s;
+}
+.main-fish-img:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(0,150,200,0.28);
+}
+
+/* Call-to-action button */
+.button.cta-button {
+    margin-top: 1.2rem;
+    font-size: 1.25rem;
+    padding: 0.9em 2em;
+    background: linear-gradient(90deg, #0093c4 60%, #00b4d8 100%);
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,150,200,0.10);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+.button.cta-button:hover {
+    background: linear-gradient(90deg, #00b4d8 60%, #0093c4 100%);
+    transform: scale(1.07);
+}
+
+/* Section styling */
+main section {
+    background: rgba(255,255,255,0.96);
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    border-radius: 18px;
+    max-width: 850px;
+    box-shadow: 0 2px 12px rgba(0,150,200,0.08);
+    transition: box-shadow 0.2s;
+}
+main section:hover {
+    box-shadow: 0 6px 24px rgba(0,150,200,0.18);
+}
+
+/* About section */
+.about-section {
+    background: linear-gradient(135deg, #b3e0ff 60%, #e0f7fa 100%);
+    border: 2px solid #0093c4;
+    box-shadow: 0 2px 12px rgba(0,150,200,0.10);
+    font-size: 1.18rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #0077b6;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px #a2d9ff;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #0093c4;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px #a2d9ff;
+}
+
+header p, main p, ul li {
+    font-family: 'Roboto', 'Quicksand', Arial, sans-serif;
+    font-size: 1.18rem;
+    color: #1a3c4e;
+    margin: 0.5rem 0;
+}
+
+ul {
+    padding-left: 1.5rem;
+    font-size: 1.13rem;
+}
+
+.curiosities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.curiosity {
+    background: linear-gradient(135deg, #e0f7fa 60%, #b3e0ff 100%);
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,150,200,0.10);
+    padding: 1rem;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 1.08rem;
+    border: 2px solid #0093c4;
+}
+.curiosity:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 32px rgba(0,150,200,0.18);
+    border-color: #00b4d8;
+}
+
+.curiosity img {
+    width: 120px;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 2px 8px rgba(0,150,200,0.10);
+    border: 3px solid #00b4d8;
+    background: #fff;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #0093c4 60%, #b3e0ff 100%);
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 18px 18px 0 0;
+    margin-top: 2rem;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+    font-size: 1.2rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Responsive system */
+@media (max-width: 900px) {
+    main section {
+        max-width: 98vw;
+        padding: 1.2rem 0.5rem;
+    }
+    .curiosities {
+        flex-direction: column;
+        align-items: center;
+    }
+    .curiosity {
+        width: 90vw;
+        margin-bottom: 1rem;
+    }
+    .main-fish-img {
+        width: 90vw;
+        max-width: 300px;
+    }
+    .navbar ul {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.3rem; }
+    main section { padding: 0.7rem 0.2rem; }
+    .curiosity { font-size: 0.98rem; }
+    footer { font-size: 1rem; }
+    .navbar a { font-size: 1rem; padding: 0.2rem 0.4rem; }
 }
