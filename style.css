@@ -3,7 +3,8 @@ body {
     font-family: 'Montserrat', 'Quicksand', 'Roboto', Arial, sans-serif;
     background: linear-gradient(135deg, #e3f6fd 0%, #b3e0ff 100%);
     color: #1a3c4e;
-    font-size: 1.08rem;
+    font-size: 1.18rem;
+    line-height: 1.7;
 }
 
 .sea-background {
@@ -70,7 +71,7 @@ body {
 .navbar a {
     color: #fff;
     font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.22rem;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 1px;
@@ -85,7 +86,7 @@ body {
 
 /* Header and main fish image */
 header {
-    background: linear-gradient(135deg, #e0f7fa 80%, #b3e0ff 100%);
+    background: linear-gradient(135deg, #e0f7fa 80%, #f6f9ff 100%);
     padding: 2.5rem 1rem 1.5rem 1rem;
     border-radius: 0 0 30px 30px;
     text-align: center;
@@ -131,7 +132,7 @@ header {
 
 /* Section styling */
 main section {
-    background: rgba(255,255,255,0.96);
+    background: linear-gradient(135deg, #f6f9ff 70%, #e0f7fa 100%);
     margin: 2rem auto;
     padding: 2rem 1.5rem;
     border-radius: 18px;
@@ -145,16 +146,43 @@ main section:hover {
 
 /* About section */
 .about-section {
-    background: linear-gradient(135deg, #b3e0ff 60%, #e0f7fa 100%);
+    background: linear-gradient(135deg, #b3e0ff 60%, #f6f9ff 100%);
     border: 2px solid #0093c4;
     box-shadow: 0 2px 12px rgba(0,150,200,0.10);
-    font-size: 1.18rem;
+    font-size: 1.22rem;
+    font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
     margin-bottom: 2rem;
+}
+
+.site-title {
+    font-family: 'Sacramento', 'Pacifico', cursive;
+    font-size: 3.6rem;
+    color: #2e3192;
+    background: linear-gradient(90deg, #2e3192 10%, #00b4d8 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 12px #b3e0ff;
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+}
+
+.site-subtitle {
+    font-family: 'Comfortaa', 'Montserrat', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #0093c4;
+    background: linear-gradient(90deg, #b3e0ff 0%, #e0f7fa 100%);
+    padding: 0.3rem 0;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,150,200,0.08);
 }
 
 h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 3rem;
+    font-size: 3.2rem;
+    font-weight: 700;
     color: #0077b6;
     margin-bottom: 0.5rem;
     text-shadow: 0 2px 8px #a2d9ff;
@@ -163,22 +191,24 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
     color: #0093c4;
     margin-bottom: 1rem;
     text-shadow: 0 2px 8px #a2d9ff;
 }
 
 header p, main p, ul li {
-    font-family: 'Roboto', 'Quicksand', Arial, sans-serif;
-    font-size: 1.18rem;
+    font-family: 'Quicksand', 'Montserrat', 'Roboto', Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
     color: #1a3c4e;
     margin: 0.5rem 0;
 }
 
 ul {
     padding-left: 1.5rem;
-    font-size: 1.13rem;
+    font-size: 1.22rem;
 }
 
 .curiosities {
@@ -197,7 +227,8 @@ ul {
     width: 220px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    font-size: 1.08rem;
+    font-size: 1.15rem;
+    font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
     border: 2px solid #0093c4;
 }
 .curiosity:hover {
@@ -225,13 +256,59 @@ footer {
     color: #fff;
     font-weight: bold;
     box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
-    font-size: 1.2rem;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
     letter-spacing: 1px;
+}
+
+/* Importance section */
+.importance-section {
+    background: linear-gradient(135deg, #e0f7fa 60%, #b3e0ff 100%);
+    border: 2px solid #2e3192;
+    box-shadow: 0 2px 12px rgba(46,49,146,0.10);
+    font-size: 1.22rem;
+    font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
+    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+    border-radius: 18px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.importance-section h2 {
+    color: #2e3192;
+    font-size: 2.1rem;
+    font-family: 'Comfortaa', 'Montserrat', Arial, sans-serif;
+    margin-bottom: 1rem;
+}
+.importance-section ul {
+    font-size: 1.15rem;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+.importance-section li {
+    margin-bottom: 0.5rem;
+    color: #0077b6;
+}
+
+/* Alternate section backgrounds for visual softness */
+#caracteristicas {
+    background: linear-gradient(135deg, #e0f7fa 80%, #b3e0ff 100%);
+}
+#classificacao {
+    background: linear-gradient(135deg, #f6f9ff 80%, #e0f7fa 100%);
+}
+#curiosidades {
+    background: linear-gradient(135deg, #b3e0ff 80%, #e0f7fa 100%);
 }
 
 /* Responsive system */
 @media (max-width: 900px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.5rem; }
+    header p, main p, ul li, .about-section, .curiosity { font-size: 1.08rem; }
+    .navbar a { font-size: 1.08rem; }
+    footer { font-size: 1.08rem; }
     main section {
         max-width: 98vw;
         padding: 1.2rem 0.5rem;
@@ -254,10 +331,11 @@ footer {
 }
 
 @media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.3rem; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.1rem; }
+    header p, main p, ul li, .about-section, .curiosity { font-size: 0.98rem; }
+    .navbar a { font-size: 0.98rem; }
+    footer { font-size: 0.98rem; }
     main section { padding: 0.7rem 0.2rem; }
     .curiosity { font-size: 0.98rem; }
-    footer { font-size: 1rem; }
-    .navbar a { font-size: 1rem; padding: 0.2rem 0.4rem; }
 }
